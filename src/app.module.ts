@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 // import { DatabaseProvider } from './database/database';
 import { DatabaseModule } from './database/database.module';
 import { PhotoService } from './photo/photo.service';
+import { PhotoModule } from './photo/photo.module';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [DatabaseModule, PhotoModule],
   controllers: [AppController],
   providers: [AppService, PhotoService],
   // providers: [...DatabaseProvider],
